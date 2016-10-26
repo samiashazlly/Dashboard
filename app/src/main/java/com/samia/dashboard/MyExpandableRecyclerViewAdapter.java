@@ -70,9 +70,9 @@ class MyParentViewHolder extends ParentViewHolder {
     }
 
     public void bind(ItemInfo parentItem) {
-        title.setText(parentItem.title);
-        icon.setImageResource(parentItem.itemId);
-        arrow.setImageResource(parentItem.arrowId);
+        title.setText(parentItem.getTitle());
+        icon.setImageResource(parentItem.getItemId());
+        arrow.setImageResource(parentItem.getArrowId());
     }
 }
 
@@ -86,7 +86,7 @@ class MyChildViewHolder extends ChildViewHolder {
     }
 
     public void bind(ChildItemInfo child) {
-        childTitle.setText(child.title);
+        childTitle.setText(child.getTitle());
     }
 }
 

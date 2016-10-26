@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < icons.length && i < titles.length; i++) {
             ItemInfo current = new ItemInfo();
-            current.itemId = icons[i];
-            current.title = titles[i];
+            current.setItemId(icons[i]);
+            current.setTitle(titles[i]);
             data.add(current);
         }
         return data;
@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
     private List<ItemInfo> setLinearData() {
         List<ItemInfo> data = new ArrayList<>();
         ChildItemInfo child1 =new ChildItemInfo();
-        child1.title="child 1";
+        child1.setTitle("child 1");
         ChildItemInfo child2 =new ChildItemInfo();
-        child2.title="child 2";
+        child2.setTitle("child 2");
         List<ChildItemInfo> childs = Arrays.asList(child1, child2);
         int[] icons = {R.drawable.ic_word_press, R.drawable.ic_google_plus, R.drawable.ic_facebook};
         String[] titles = {"WordPress Blog", "Google Connect",
@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < icons.length && i < titles.length; i++) {
             ItemInfo current = new ItemInfo();
-            current.itemId = icons[i];
-            current.title = titles[i];
-            current.childItems = childs;
-            current.arrowId = R.drawable.ic_arrow_right;
+            current.setItemId(icons[i]);
+            current.setTitle(titles[i]);
+            current.setChildItems(childs);
+            current.setArrowId(R.drawable.ic_arrow_right);
             data.add(current);
         }
         return data;
